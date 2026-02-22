@@ -14,9 +14,6 @@
             line-height: 1.6;
         }
 
-        a { color: #1e90ff; text-decoration: none; transition: color 0.3s; }
-        a:hover { color: #63b3ed; }
-
         header {
             background: #1f2937;
             padding: 40px 20px;
@@ -75,6 +72,43 @@
         code:hover {
             background: #3a3a3a;
         }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background: #1e90ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #63b3ed;
+        }
+
+        /* Contact form */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background: #2d2d2d;
+            color: #e0e0e0;
+            font-family: monospace;
+        }
+
+        textarea { resize: vertical; min-height: 80px; }
     </style>
 </head>
 <body>
@@ -112,6 +146,17 @@ print(greet("World"))
         <section>
             <h2>Next Steps</h2>
             <p>Plan to expand into larger projects, explore libraries, and improve coding techniques. This site will serve as a showcase of experiments and progress.</p>
+        </section>
+
+        <section>
+            <h2>Contact Me</h2>
+            <p>If you want to leave a message, fill out your name, your email, and your message below. Click the “Send” button to email me directly.</p>
+            <form action="mailto:jjalltheway3724@yahoo.com" method="post" enctype="text/plain">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send</button>
+            </form>
         </section>
     </main>
 </body>
